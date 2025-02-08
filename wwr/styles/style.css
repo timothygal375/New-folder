@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Delius&display=swap');
+
+.home-title {
+    font-family: "Alumni Sans Pinstripe", serif;
+    color: #396E94;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
@@ -6,10 +17,15 @@
 nav a {
     text-align: center;
     text-decoration: none;
+    padding: 35px;
 }
 
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
+}
+
+#hero-msg h4 {
+    font-family: "Delius", serif;
 }
 
 .button-box {
@@ -24,16 +40,21 @@ main section {
     height: 725px;
     background-color: black;
     color:#3F88C5;
+    font-family: "Delius", serif;
 }
 
 body {
     background-color: black;
     color:#3F88C5;
+    font-family: "Delius", serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: black;
     color:#3F88C5;
+    font-family: "Delius", serif;
 }
 
 nav a:hover {
@@ -44,6 +65,11 @@ nav a:hover {
     background-color: #CA2E55;
     text-decoration: none;
     color: white;
+    font-family: "Delius", serif;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 
 .book:hover, .join:hover {
@@ -54,19 +80,38 @@ nav a:hover {
 .msg {
     background-color: #CA2E55;
     color: white;
+    font-family: "Delius", serif;
+    line-height: 1.5em;
+    padding: 35px;
+}
+
+.msg h2 {
+    font-family: "Alumni Sans Pinstripe", serif;
+}
+
+.msg p {
+    font-size: .8em;
+    padding-bottom: 15px;
 }
 
 footer {
     background-color: black;
-    color:#3F88C5
+    color:#3F88C5;
+    font-family: "Delius", serif;
+    margin-top: 200px;
 }
 
 .logo {
     width: 80px;
 }
 
+#logo_link {
+    padding-top: 5px;
+}
+
 .icon {
     width: 80px;
+    padding-top: 10px;
 }
 
 #hero-img {
@@ -75,6 +120,7 @@ footer {
 
 footer a {
     text-decoration: none;
+    padding: 25px 50px;
 }
 
 footer p {
@@ -83,4 +129,32 @@ footer p {
 
 footer p a:hover {
     text-decoration: underline;
+}
+
+footer .social img {
+    padding-top: 15px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.rivers-card {
+    margin: 200px 0;
+}
+
+.camping-card {
+    margin: 200px 0;
+}
+
+.rapids-card {
+    margin: 200px 0;
+}
+
+.card-img {
+    border: 10px solid #3F88C5
+}
+
+main section img {
+    box-sizing: border-box;
 }

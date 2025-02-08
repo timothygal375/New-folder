@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+}
+
+body img {
+    width: 100%;
+    height: auto;
+}
+
+.dark-background {
+    background-color: gray; 
+    margin: 0;
+}
+
+.images img {
+    width: 20%;
+    margin: 4%;
+    border: 20px solid black;
+    border-radius: 50%;
+}
+
+.images {
+    text-align: center;
+}
