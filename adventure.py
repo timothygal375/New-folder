@@ -876,7 +876,8 @@ def leave_here():
                     "quite sick of the sensation) and wake up in the Waffle House bathroom. You "
                     "blink once. You blink again. You take in the scenery: the rusting sink, the dirty "
                     "toilet, the awful smell. You can't believe it. You actually made it back. It "
-                    "may not be pretty, but it's reality. You win!").lower()
+                    "may not be pretty, but it's reality. You win! \nDo you want to play again?"
+                    "(YES/NO)").lower()
        if real == "investigate":
               print("Unless...it's not real. Something Joseph Gordon-Levitt said comes back to you: "
                     "'Even when I think I've won, I ALWAYS investigate.' You decide to look a little "
@@ -906,6 +907,10 @@ def leave_here():
                     "that easy, walk away. Finally wake up. If you want to play again, I'll be here. Just do "
                     "it. Walk away. But first, I have a question: '")
               final_restart()
+       elif real == "yes":
+              start()
+       else:
+              print("Thanks for playing!")
 
 def choose_drive():
       print("'Let's keep driving,' you say. Joseph Gordon-Levitt nods and keeps driving. Suddenly, "
@@ -933,5 +938,5 @@ def final_restart():
             start()
        else: 
             print("'Thanks for playing!' Elliot says. 'If you ever want to escape from reality,"
-                    "I'll be here, waiting. Always.")
+                    "I'll be here, waiting. Always.'")
 start()
