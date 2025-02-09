@@ -144,7 +144,7 @@ h2 {
 }
 
 .camping-card {
-    margin: 200px;
+    margin: 200px 0;
 }
 
 .rapids-card {
@@ -158,3 +158,5 @@ h2 {
 main section img {
     box-sizing: border-box;
 }
+
+/*Hopefully, adding this comment will allow my changes to be pushed to GitHub*/
