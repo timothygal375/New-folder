@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.big-text {
+    position: absolute;
+    top: 100px;
+    left: 35%;
+    font-size: 5em;
+    letter-spacing: 10px;
+    font-weight: bolder;
+}
+
+.text {
+    color: maroon;
+    font-family:  Georgia, Times, "Times New Roman", serif;
+    margin-top: 500px;
+    margin-left: 250px;
+    font-size: 3em;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.gray-box {
+    background-color: gray;
+}
