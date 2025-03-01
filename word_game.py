@@ -1,10 +1,35 @@
+import random
+
+print("Welcome to the word guessing game! ")
 def start():
-    print("Welcome to the word guessing game! ")
-    word = "jarom"
+    difficulty = input("Select a difficulty (Easy, Medium, Hard, Expert) ").lower()
+
+    word_list = ["apple", "blue", "star", "fish", "rock", "book", "tree", "frog", "gold", "moon", "sand", "kite", "rain", "snow", "fire"]
+    word_list2 = ["rocket", "planet", "paper", "puzzle", "music", "dance", "green", "brown", "cloud", "chair", "house", "smile", "beach", "ocean", "train"]
+    word_list3 = ["butterfly", "universe", "computer", "picture", "adventure", "sunflower", "journey", "mystery", "blanket", "rhythm", "candle", "library", "horizon", "bicycle", "travel"]
+    word_list4 = ["encyclopedia", "extraordinary", "kindergarten", "laboratory", "waterfall", "astronaut", "skyscraper", "photography", "hologram", "discovery", "observation", "celebration", "generation", "championship", "elephant"]
+
+    if difficulty == "easy":
+        word = random.choice(word_list)
+
+    elif difficulty == "medium":
+        word = random.choice(word_list2)
+    
+    elif difficulty == "hard":
+        word = random.choice(word_list3)
+    
+    elif difficulty == "expert":
+        word = random.choice(word_list4)
+    
+    else:
+        print("Invalid input. Please try again. ")
+        start()
+
     guesses = ['_'] * len(word)
     count = 0
     print(f"Your hint is {' '.join(guesses)}")
-    while "_" in guesses:
+
+    while True:
         guess = (input("What is your guess? "))
         count += 1
     
@@ -28,8 +53,11 @@ def start():
         else:
             guesses = new_guesses
             print(f"{" ".join(guesses)}")
-    
-    print(f"Nice! You got it. It took you {count} guesses. ")
+
+        if "".join(guesses).lower() == word.lower():
+             print(f"Nice! You got it. It took you {count} guesses. ")
+             break
+
     restart = input("Do you want to play again? (yes/no) ")
     if restart == "yes":
         start()
