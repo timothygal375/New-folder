@@ -52,14 +52,57 @@ h4 {
     color: red;
 }
 
+.nes-section, .snes-section {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
 .nes-img, .snes-img {
     width: 200px;
     height: auto; 
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .nes-img:hover, .snes-img:hover {
     opacity: 0.5;
     transform: scale(1.1);
+}
+
+.nes-section:hover .nes-img {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+.nes-section:hover .nes-img-overlay, .snes-section:hover .snes-img-overlay {
+    opacity: 1; 
+}
+
+.nes-img-overlay h3, .snes-img-overlay h3 {
+    opacity: 1; 
+}
+
+.nes-img-overlay, .snes-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: 0.3s ease;
+}
+
+.nes-img-overlay h3, .snes-img-overlay h3 {
+    color: white;
+    font-size: 20px; 
+    text-align: center;
+    margin: 0;
 }
 
 footer p {
@@ -82,3 +125,60 @@ p {
     color: red;
 }
 
+.game-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    text-align: center; 
+}
+
+.game-grid img:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+.game-grid img {
+    width: 200px;
+    height: auto; 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: #576066;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    position: relative; 
+    max-height: 80vh;
+    overflow-y: auto; 
+}
+
+.modal h2, .modal p {
+    color: white;
+}
+
+.modal img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}

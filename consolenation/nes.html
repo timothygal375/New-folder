@@ -9,17 +9,58 @@
 <body>
     <header>
         <a id = "logo_link" href = "index.html">
-            <img class = "logo" src = "logo.png" alt = "Console Nation Logo">
+            <img class = "logo" src = "images/logo.png" alt = "Console Nation Logo">
         </a>
     </header>
     <main class = "nes-main">
         <h1 class = "nes-title">Nintendo Entertainment System</h1>
         <section class = "nes-text">
-            <img class = "pg2-nes-img" src = "nes-img.png" alt = "NES Console">
+            <img class = "pg2-nes-img" src = "images/nes-img.png" alt = "NES Console">
             <p>The Nintendo Entertainment System is one of the most iconic consoles of all time. Originally released in Japan in 1983 under the name Famicom (short for family computer), Nintendo was hesitant to release the console in America due to the crash in the video game industry that hit America hard in 1983. The market was oversaturated with subpar games, and consumers were tired of paying for a game and bringing it home, only to find that it was massively inferior to its arcade counterpart and/or was simply poorly designed, with confusing objectives and frustrating glitches. It seemed as if video games were to be relegated to arcades forever and removed from homes around America. With all this in mind, Nintendo decided to attempt to release the console in America anyway. Its graphics were comparable to those of many of the most popular arcade games of that period, and the popularity of those games seemed to prove that video games were not out just yet in America. Thus, Nintendo of America was given the daunting task of selling the Famicom to retailers nationwide. With the public’s aversity to video game consoles in mind, Nintendo of America designed the console to look more like a VCR than an Atari. Additionally, they included several peripherals with the console to make it look more like an expensive toy than a video game system. These peripherals included the light gun, used to shoot ducks in Duck Hunt, and ROB the robot, who would act almost like a second player in the games for which he was designed. Following a very successful test release in New York City, the Nintendo Entertainment System took the nation by storm, selling over 60 million units, and proving that home video games were still a viable source of revenue. 
                 The NES didn’t have much competition for most of its life. Atari took a stab at the home console market again with their 7200 model, and Sega tried to get a piece of the pie as well with their Master System. However, neither was nearly as popular as the NES, which became the undisputed king of the 8-bit era of home consoles. 
             </p>
         </section>
+        <section class = "game-grid">
+            <img class = "donkey-kong" src = "images/donkey_kong_img.jpg" alt = "Donkey Kong" onclick = "openModal('Donkey Kong', 'images/donkey-kong-gameplay-img.webp', 'Donkey Kong is an arcade game released by Nintendo in 1981. It was Marios first appearance! In this game, he is known as Jumpman and his one desire is to save his beloved Pauline from the clutches of Donkey Kong! Nintendo licensed it to Coleco, who released a version of the game for their ColecoVision system before porting it to the Famicom and NES themselves, which was inarguably a superior version. Donkey Kong was the first game in its genre, and pioneered platforming games as a whole.')">
+            <img class = "mario-bros" src = "images/mario_bros_img.jpg" alt = "Mario Bros." onclick = "openModal('Mario Bros.', 'images/mario-bros-gameplay-img.jpg', 'Mario Bros. is a 1983 arcade game developed and published by Nintendo. It was the first game to feature Mario as a protagonist in a platforming game, and it introduced the character of Luigi as his brother and co-star. The game is set in the sewers of New York City, where the brothers must defeat various creatures that have come from the pipes.')">
+            <img class = "duck-hunt" src = "images/duck-hunt-img.jpg" alt = "Duck Hunt" onclick = "openModal('Duck Hunt', 'images/duck-hunt-gameplay-img.webp', 'Duck Hunt is a light gun shooter video game developed and published by Nintendo for the Nintendo Entertainment System. It was released in Japan in 1984 and in North America in 1985. The game is played with the Zapper light gun, which is used to shoot ducks on the screen.')"> 
+            <img class = "super-mario-bros" src = "images/super_mario_bros_img.png" alt = "Super Mario Bros." onclick = "openModal('Super Mario Bros.', 'images/super-mario-bros-gameplay-img.jpg', 'Super Mario Bros. is a 1985 platform game developed and published by Nintendo for the Nintendo Entertainment System. It was the first game in the Super Mario series and is widely considered one of the greatest video games of all time. The player controls Mario, or his brother Luigi in multiplayer mode, as they journey through the Mushroom Kingdom to rescue Princess Toadstool from Bowser.')">
+            <img class = "super-mario-2" src = "images/super_mario_2_img.jpg" alt = "Super Mario Bros. 2" onclick = "openModal('Super Mario Bros. 2', 'images/super-mario-2-gamplay-img.jpg', 'Super Mario Bros. 2 is a 1988 platform game developed and published by Nintendo for the Nintendo Entertainment System. It is the second game in the Super Mario series and was released in North America and Europe as a sequel to Super Mario Bros. The game features a different gameplay style than its predecessor, with the player able to choose between four characters: Mario, Luigi, Princess Toadstool, and Toad.')">
+            <img class = "super-mario-3" src = "images/super_mario_3_img.png" alt = "Super Mario Bros. 3" onclick = "openModal('Super Mario Bros. 3', 'images/super-mario-3-gameplay-img.jpg', 'Super Mario Bros. 3 is a 1988 platform game developed and published by Nintendo for the Nintendo Entertainment System. It is the third game in the Super Mario series and is widely considered one of the greatest video games of all time. The player controls Mario or his brother Luigi as they journey through various worlds to rescue Princess Toadstool from Bowser.')">
+            <img class = "the-legend-of-zelda" src = "images/legend_of_zelda_img.jpg" alt = "The Legend of Zelda" onclick = "openModal('The Legend of Zelda', 'images/legend-of-zelda-gameplay-img.jpg', 'The Legend of Zelda is an action-adventure game developed and published by Nintendo for the Nintendo Entertainment System. It was released in Japan in 1986 and in North America in 1987. The game follows the adventures of Link, a young warrior who must rescue Princess Zelda and defeat the evil Ganon.')">
+            <img class = "metroid" src = "images/metroid_img.jpg" alt = "Metroid" onclick = "openModal('Metroid', 'images/metroid-gameplay-img.jpg', 'Metroid is an action-adventure game developed and published by Nintendo for the Nintendo Entertainment System. It was released in Japan in 1986 and in North America in 1987. The game follows the adventures of Samus Aran, a bounty hunter who must defeat the Space Pirates and their leader, Ridley.')">
+            <img class = "mega-man-2" src = "images/mega_man_2_img.jpg" alt = "Mega Man 2" onclick = "openModal('Mega Man 2', 'images/mega-man-2-gameplay-img.jpg', 'Mega Man 2 is the most popular Mega Man game on the NES. The Mega Man series is characterized by action-packed platforming levels, tough-as-nails difficulty, and killer soundtracks. Mega Man 2 effectively synergizes these elements into what is perhaps the greatest Mega Man game ever.')">
+            <img class = "castlevania" src = "images/castlevania_img.jpg" alt = "Castlevania" onclick = "openModal('Castlevania', 'images/castlevania_gameplay_img.jpg', 'Castlevania is an action-adventure game developed and published by Konami for the Nintendo Entertainment System. It was released in Japan in 1986 and in North America in 1987. The game follows the adventures of Simon Belmont, a vampire hunter who must defeat Dracula and his minions.')">
+            <img class = "contra" src = "images/contra_img.jpg" alt = "Contra" onclick = "openModal('Contra', 'images/contra-gameplay-img.jpg', 'Contra is a run-and-gun action game developed and published by Konami for the Nintendo Entertainment System. It was released in Japan in 1987 and in North America in 1988. The game follows the adventures of two soldiers, Bill Rizer and Lance Bean, as they fight against an alien invasion.')">
+            
+        </section>
+        <div id = "gameModal" class = "modal">
+            <div class = "modal-content">
+                <span class = "close-btn" onclick = "closeModal()">&times;</span>
+                <h2 id = "gameTitle"></h2>
+                <img id = "gameImage" src = "" alt = "Game Image">
+                <p id = "gameDescription"></p>
+            </div>
+        </div>
+        <script>
+          function openModal(title, imgSrc, description) {
+            document.getElementById("gameTitle").innerText = title;
+            document.getElementById("gameImage").src = imgSrc;
+            document.getElementById("gameImage").alt = title;
+            document.getElementById("gameDescription").innerText = description;
+            document.getElementById("gameModal").style.display = "flex";
+          }
+
+            function closeModal() {
+                document.getElementById("gameModal").style.display = "none";
+            }
+
+            function clickOutsideModal(event) {
+            if (event.target.classList.contains("modal")) {
+                closeModal();
+            }
+        }
+        </script>
     </main>
     <footer>
         <p>Console Nation &copy; 2025 - Timothy Galbraith</p>
