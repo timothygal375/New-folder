@@ -20,6 +20,41 @@
                 The Super Nintendo was Nintendo's first 16-bit console. The first 16-bit console ever released was called the Turbo Grafx-16 in North America and the PC Engine everywhere else. Although it had much better graphics than its competitors at the time, it didn’t do nearly as well as the NES. The next major player in the 16-bit era was the Sega Genesis, released in 1988 in Japan and 1989 in North America. Following the disappointing performance of the Master System, Sega utilized an aggressive marketing campaign, demonstrating how the Sega Genesis was much more powerful than the NES. Nintendo took a couple of years to retaliate, during which time Sega managed to get a decent amount of market share. Nintendo’s 16-bit console was called the Super Nintendo Entertainment System, which boasted superior graphics to any of its competitors, with a price tag to go with it. Sega and Nintendo continued to battle for their share of the market, ending up with comparable sales numbers, around 40-50 million units each. 
             </p>
         </section>
+        <section class = "game-grid">
+            <img class = "super-mario-world" src = "images/super-mario-world-img.jpg" alt = "Super Mario World" onclick = "openModal('Super Mario World', 'images/super-mario-world-gameplay-img.webp', 'Super Mario World is a 1990 platform game developed and published by Nintendo for the Super Nintendo Entertainment System. The story follows Mario’s quest to save Princess Toadstool and Dinosaur Land from the series antagonist Bowser and his children, the Koopalings. The gameplay is similar to that of earlier Super Mario games, with new power-ups and moves added to Mario’s arsenal.')">
+            <img class = "link-to-the-past" src = "images/link-to-the-past-img.jpg" alt = "The Legend of Zelda: A Link to the Past" onclick = "openModal('The Legend of Zelda: A Link to the Past', 'images/link-to-the-past-gameplay-img.png', 'The Legend of Zelda: A Link to the Past is a 1991 action-adventure game developed and published by Nintendo for the Super Nintendo Entertainment System. The game follows Link as he travels between the light world and the dark world to awaken the descendants of the Seven Sages and stop the evil sorcerer Agahnim from obtaining the Triforce.')">
+            <img class = "super-metroid" src = "images/super-metroid-img.jpg" alt = "Super Metroid" onclick = "openModal('Super Metroid', 'images/super-metroid-gameplay-img.png', 'Super Metroid is a 1994 action-adventure game developed and published by Nintendo for the Super Nintendo Entertainment System. The game is the third installment in the Metroid series and follows bounty hunter Samus Aran as she attempts to retrieve a stolen Metroid from the Space Pirates.')">
+            <img class = "f-zero" src = "images/f-zero-img.jpg" alt = "F-Zero" onclick = "openModal('F-Zero', 'images/f-zero-gameplay-img.jpg', 'F-Zero is a racing game that demonstarted the groundbreaking graphics of the Super Nintendo. It rendered its graphics in Mode 7, a graphics mode that allowed for the rotation and scaling of background layers, which was used to create a 3D effect. The game was released in 1990 and was one of the launch titles for the Super Nintendo Entertainment System.')">
+            <img class = "pilotwings" src = "images/pilotwings-img.jpg" alt = "Pilotwings" onclick = "openModal('Pilotwings', 'images/pilotwings-gameplay-img.jpg', 'Pilotwings is a 1990 flight simulation game developed and published by Nintendo for the Super Nintendo Entertainment System. The game takes place on an island where players complete various missions using different aerial vehicles, such as hang gliders, jet packs, and gyrocopters.')">
+            <img class = "chrono-trigger" src = "images/chrono-trigger-img.jpg" alt = "Chrono Trigger" onclick = "openModal('Chrono Trigger', 'images/chrono-trigger-gamepley-img.jpg', 'Chrono Trigger is a 1995 role-playing game developed and published by Square for the Super Nintendo Entertainment System. The game follows a group of adventurers who travel through time to prevent a global catastrophe. The game is known for its multiple endings, innovative battle system, and memorable characters.')">
+        </section>
+        <div id = "gameModal" class = "modal">
+            <div class = "modal-content">
+                <span class = "close-btn" onclick = "closeModal()">&times;</span>
+                <h2 id = "gameTitle"></h2>
+                <img id = "gameImage" src = "" alt = "Game Image">
+                <p id = "gameDescription"></p>
+            </div>
+        </div>
+        <script>
+          function openModal(title, imgSrc, description) {
+            document.getElementById("gameTitle").innerText = title;
+            document.getElementById("gameImage").src = imgSrc;
+            document.getElementById("gameImage").alt = title;
+            document.getElementById("gameDescription").innerText = description;
+            document.getElementById("gameModal").style.display = "flex";
+          }
+
+            function closeModal() {
+                document.getElementById("gameModal").style.display = "none";
+            }
+
+            function clickOutsideModal(event) {
+            if (event.target.classList.contains("modal")) {
+                closeModal();
+            }
+        }
+        </script>
     </main>
     <footer>
         <p>Console Nation &copy; 2025 - Timothy Galbraith</p>
