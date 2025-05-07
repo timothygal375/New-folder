@@ -1,0 +1,51 @@
+.lesson-full {
+    background: #fff;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .note-display img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .note-options button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  #feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .keyboard {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .keys {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .key {
+    width: 40px;
+    height: 150px;
+    margin: 0 2px;
+    background: #fff;
+    border: 1px solid #333;
+    line-height: 150px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .key:hover {
+    background: #eee;
+  }
+  
