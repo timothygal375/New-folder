@@ -2,8 +2,19 @@ const noteDisplay = document.querySelector(".note-display img");
 const feedback = document.getElementById("feedback");
 const buttons = document.querySelectorAll(".note-options button");
 
-const notes = ["C", "D", "E", "F", "G", "A", "B"];
-let currentNote = "";
+const clefNotes = {
+  treble: ["d3", "e3", "f3", "g3", "a3", "b3", "c4", "d4", "e4", "f4", "g4", "a4", "b4", "c5", "d5", "e5", "f5", "g5", "a5", "b5", "c6", "d6", "e6", "f6", "g6",],
+  bass: ["a1", "b1", "c2", "d2", "e2", "f2", "g2", "a2", "b2", "c3", "d3", "e3", "f3", "g3", "a3", "b3", "c4", "d4", "e4", "f4", "g4", "a4",],
+  alto: ["e2", "f2", "g2", "a2", "b2", "c3", "d3", "e3", "f3", "g3", "a3", "b3", "c4", "d4", "e4", "f4", "g4", "a4", "b4", "c5", "d5", "e5", "f5", "g5", "a5"],
+};
+
+const clefs = Object.keys(clefNotes);
+let currentClef = "";
+
+const clefSelect = document.getElementById("clef-select");
+const soundToggle = document.getElementById("sound-toggle");
+
+let soundEnabled = true;
 
 document.body.addEventListener("click", () => {
   Tone.start();
@@ -12,34 +23,59 @@ document.body.addEventListener("click", () => {
 // Initialize the synth once
 const synth = new Tone.Synth().toDestination();
 
-function playNoteSound(note) {
-  const noteWithOctave = note + "4"; // Middle C octave (you can adjust)
-  synth.triggerAttackRelease(noteWithOctave, "8n");
+function playNoteSound(noteOctave) {
+  if (soundEnabled) {
+    synth.triggerAttackRelease(noteOctave, "8n");
+  }
 }
 
 // Load a new random note
 function loadRandomNote() {
-  const index = Math.floor(Math.random() * notes.length);
-  currentNote = notes[index];
-  noteDisplay.src = `assets/notes/note_${currentNote}.png`;
+  const userClefChoice = clefSelect.value;
+
+  currentClef = (userClefChoice === "random")
+    ? clefs[Math.floor(Math.random() * clefs.length)]
+    : userClefChoice;
+
+  const validNotes = clefNotes[currentClef];
+  const noteOctave = validNotes[Math.floor(Math.random() * validNotes.length)];
+
+  currentNote = noteOctave.slice(0, -1);
+  currentOctave = noteOctave.slice(-1);
+
+  noteDisplay.src = `assets/notes/note_${currentClef}_${noteOctave}.png`;
   feedback.textContent = "";
-  playNoteSound(currentNote);
+  playNoteSound(currentNote + currentOctave);
 }
+
 
 // Check user's answer
 buttons.forEach(button => {
   button.addEventListener("click", () => {
     const guess = button.textContent;
-    if (guess === currentNote) {
+    if (guess === currentNote.toUpperCase()) {
       feedback.textContent = "✅ Correct!";
       feedback.style.color = "green";
+      feedback.className = "correct";
       setTimeout(loadRandomNote, 1000); // Load next note after 1 sec
     } else {
       feedback.textContent = "❌ Try again.";
       feedback.style.color = "red";
+      feedback.className = "incorrect";
     }
   });
 });
 
 // Initialize first note
 loadRandomNote();
+
+document.querySelectorAll('.key').forEach(key => {
+  key.addEventListener('click', () => {
+    const note = key.getAttribute('data-note');
+    playNoteSound(note);
+  });
+});
+
+soundToggle.addEventListener("change", () => {
+  soundEnabled = soundToggle.checked;
+});
