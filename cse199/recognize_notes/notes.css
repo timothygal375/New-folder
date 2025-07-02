@@ -13,7 +13,6 @@ body {
   padding-bottom: 100px;
 }
 
-/* Color Theme */
 :root {
   --primary: #4a90e2;
   --accent: #ffb347;
@@ -70,6 +69,72 @@ main {
 
 .controls label {
   font-weight: bold;
+}
+
+select#clef-select {
+  background-color: var(--bg-light);
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: border-color 0.2s;
+}
+
+select#clef-select:hover,
+select#clef-select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle-label {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  background-color: #ccc;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.toggle-label .slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+#sound-toggle {
+  display: none;
+}
+
+#sound-toggle:checked + .toggle-label {
+  background-color: var(--accent);
+}
+
+#sound-toggle:checked + .toggle-label .slider {
+  transform: translateX(24px);
+}
+
+.toggle-text {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 

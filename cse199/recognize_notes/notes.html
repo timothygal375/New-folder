@@ -22,13 +22,15 @@
             <option value="alto">Alto</option>
           </select>
 
-          <label for="sound-toggle">
+          <div class="toggle-wrapper">
             <input type="checkbox" id="sound-toggle" checked />
-            🔊 Sound On
-          </label>
+            <label for="sound-toggle" class="toggle-label">
+              <span class="toggle-text">🔊 Sound</span>
+              <span class="slider"></span>
+            </label>
+          </div>
         </div>
-
-      
+        
         <div class="note-display">
           <img src="assets/treble-staff.png" alt="Note On Staff" />
           <p>Which note is this?</p>
