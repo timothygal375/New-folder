@@ -1,39 +1,42 @@
-FUNCTION isLeapYear(year)
-    IF (year MOD 4 == 0) AND ((year MOD 100 != 0) OR (year MOD 400 == 0))
-        RETURN true
-    ELSE
-        RETURN false
+FUNCTION findHighestAverage(list)
 
-FUNCTION getTotalDays(year, month, day)
-    SET totalDays = 0
+    GET subArraySize
+    averages = []
+    loopAmount = length of list - (subArraySize - 1)
 
-    FOR y FROM 0 TO (year - 1) A
-        IF isLeapYear(y)
-            totalDays = totalDays + 366
-        ELSE
-            totalDays = totalDays + 365
+    FOR i from 0 to loopAmount - 1 A
+        averageCount = 0 
+        FOR j FROM i to i + subArraySize - 1 B
+            averageCount = averageCount + list[i] C
+        average = averageCount / subArraySize D
+        ADD average to averages 
+    
+    highestAverage = 0
+    FOR i in averages 
+        if i > highestAverage 
+            highestAverage = averages[i] E
 
-    monthDays = {
-        1: 31, 2: 28, 3: 31, 4: 30,
-        5: 31, 6: 30, 7: 31, 8: 31,
-        9: 30, 10: 31, 11: 30, 12: 31
-    }
+    RETURN highestAverage
 
-    IF isLeapYear(year)
-        monthDays[2] = 29
 
-    FOR m FROM 1 TO (month - 1) B 
-        totalDays = totalDays + monthDays[m]
+FUNCTION find_highest_average(original_list, subarray_size):
+    SET averages_list TO empty list
 
-    totalDays = totalDays + day C
+    SET num_iterations TO length of original_list - subarray_size + 1
 
-    RETURN totalDays
+    FOR i FROM 0 TO num_iterations - 1:
+        SET subarray_sum TO 0
 
-INPUT year1, month1, day1
-INPUT year2, month2, day2
+        FOR j FROM i TO i + subarray_size - 1:
+            subarray_sum = subarray_sum + original_list[j]
 
-SET days1 = getTotalDays(year1, month1, day1)
-SET days2 = getTotalDays(year2, month2, day2)
+        SET average TO subarray_sum / subarray_size
+        APPEND average TO averages_list
 
-SET difference = ABS(days1 - days2) 
-OUTPUT difference
+    SET highest_average TO averages_list[0]
+
+    FOR each avg IN averages_list:
+        IF avg > highest_average:
+            SET highest_average TO avg
+
+    RETURN highest_average

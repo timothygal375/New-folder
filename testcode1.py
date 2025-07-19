@@ -1,13 +1,10 @@
-def max_by_key(list, key_extractor):
-    max_value = list[0]
-    max_key = key_extractor(max_value)
-    for i in list[1:]:
-        current_key = key_extractor(i)
-        if current_key > max_key:
-            max_value = i 
-            max_key = current_key 
-    return max_value 
+def increment_exponentially(base, increment):
+    return lambda x: base ** (x + increment)
 
-numbers = [1, 3, 5, 4, 7, 6]
-value = max_by_key(numbers, lambda x: x)
-print(value)
+first_function = increment_exponentially(1, 0)
+second_function = increment_exponentially(2, 1)
+third_function = increment_exponentially(3, 2)
+
+print(first_function(1))
+print(second_function(1))
+print(third_function(1))

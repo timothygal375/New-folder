@@ -1,0 +1,26 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "qrgen"
+author = "Timothy Galbraith"
+author-email = "timothygal.375@gmail.com"
+home-page = "https://github.com/timothygal.375/qrgen"
+license = "MIT"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Developers"
+]
+description-file = "README.md"
+requires = [
+    "qrcode",
+    "Pillow"
+]
+
+[tool.flit.metadata.requires-extra]
+dev = []
+
+[tool.flit.sdist]
+include = ["tests"]
